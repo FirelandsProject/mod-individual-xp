@@ -1,0 +1,41 @@
+#
+# Copyright (C) 2023+ Firelands Core Project , released under AGPL v3 license: https://github.com/FirelandsProject/firelands-cata/blob/master/LICENSE
+#
+
+[worldserver]
+
+########################################
+# Individual XP configuration
+########################################
+#
+#    IndividualXP.Enabled
+#        Description: Enable Individual XP mod.
+#        Default:     0 - Disabled
+#                     1 - Enabled
+#
+
+IndividualXP.Enabled = 1
+
+#
+#    IndividualXp.Announce
+#        Description: Announce the IndividualXP Module at logon.
+#        Default:     IndividualXP.Announce   = 1
+#
+
+IndividualXP.Announce = 1
+
+#
+#    IndividualXP.MaxRate
+#        Description: This is the max amount a player can set their xp to.
+#        Default:     Default  = 1
+#
+
+IndividualXP.MaxRate = 10
+
+#
+#    IndividualXP.DefaultRate
+#        Description: This is the default rate players start with.
+#        Default:     Default  = 1
+#
+
+IndividualXP.DefaultRate = 1
