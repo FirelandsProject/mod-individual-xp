@@ -1,22 +1,33 @@
-# Base Module template
+# Individual XP Module
 
 [English](README.md) | [Español (Soon...)]()
 
+- Allows players to View, Set, or Toggle the rate at which they gain experience individually.
 
-## How to create your own module
+## How to install
 
-- Before start, Please execute the script `create-module.sh` located in [`mods/`](https://github.com/FirelandsProject/firelands-cata/tree/master/mods).
-- Edit the `README.md` and other files (`include.sh` etc...) to fit your module. Note: the README is automatically created from `README_example.md` when you use the script `create-module.sh`.
+1. clone this module into the modules directory of the main source
+2. apply the provided sql in the character database
+3. re-run cmake
+4. compile.
 
+## Configuration 
 
-## How to test your module?
+There are two variables to configure in the Config:
 
-Disable PCH (precompiled headers) and try to compile. To disable PCH, set `-DNOPCH=1` with Cmake.
+1. Max XP Rate
+2. Default XP Rate
 
-If you forgot some headers, it is time to add them!
+The Max XP Rate variable dictates how high a player can set their XP rate.
+While the Default XP Rate variable dictates what XP rate players start with and the rate will be set to if the user does '.XP Default'
 
-## Licensing
+## Player Commands
 
-The default license of the **base-module** template is the MIT but you can use a different license for your own modules.
-
-So modules can also be kept private. However, if you need to add new hooks to the core, as well as improving existing ones, you have to share your improvements because the main core is released under the AGPL license. Please [Create a PR](https://github.com/FirelandsProject/firelands-cata) if that is the case.
+| Command     | Description                                       |
+|-------------|---------------------------------------------------|
+| .XP         | Main Module Command                               |
+| .XP View    | Displays the current XP rate                      |
+| .XP Set #   | Changes the XP rate to the value specified        |
+| .XP Default | Returns the XP rate to the default value          |
+| .XP Disable | Disables all XP gain until user does '.XP Enable' |
+| .XP Enable  | Enables all XP gain if it was disabled            |
