@@ -1,6 +1,6 @@
 # Individual XP Module
 
-[English](README.md) | [Español (Soon...)]()
+[English](README.md) | [Español](README_ES.md)
 
 - Allows players to View, Set, or Toggle the rate at which they gain experience individually.
 
